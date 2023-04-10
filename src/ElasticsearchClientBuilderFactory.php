@@ -42,19 +42,12 @@ class ElasticsearchClientBuilderFactory
             $builder->setLogger($logger->get('es', $loggerGroup));
         }
 
-//        $caBundle = BASE_PATH.'/storage/cacert.pem';
-//        $caBundle = CaBundle::getSystemCaRootBundlePath();
-//        $caBundle = '/root/http_ca.crt';
-//        $builder->setCABundle($caBundle);
         if (Coroutine::inCoroutine()) {
             $options = [
                 'handler' => new ElasticsearchCoroutineHandler($config),
                 'base_uri' => count($hosts) == 1 ? $hosts[0] : '',
             ];
             $builder->setHttpClientOptions($options);
-//            $builder->setAsyncHttpClient();
-//            $builder->setHttpClient(new Client($config));
-//            $builder->setAsyncHttpClient(new Client());
         }
 
         return $builder;

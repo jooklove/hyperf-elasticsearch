@@ -11,11 +11,8 @@ return [
         'production' => '',
     ],
 
-    // 节点地址
-    'hosts' => env('ES_HOSTS', 'http://127.0.0.1:9201'),
-
-    //请求响应类型 可选值array,original,string
-    'response_type' => 'array',
+    // 节点地址,多个节点使用|分隔  例如 http://127.0.0.1:9201|http://127.0.0.1:9202
+    'hosts' => env('ES_HOSTS', 'http://127.0.0.1:9200'),
 
     'username' => env('ES_USERNAME', 'elastic'),
     'password' => env('ES_PASSWORD', ''),
