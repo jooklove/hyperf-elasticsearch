@@ -1,0 +1,33 @@
+{
+    "name": "wo_orld/hyperf-elasticsearch",
+    "description": "适用于hyperf的es8协程客户端",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "World\\HyperfElasticsearch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wo_orld",
+            "email": "li163_mail@163.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+		"php": ">=8.0",
+		"ext-swoole": ">=4.5",
+		"elasticsearch/elasticsearch": "8.6.*",
+        "hyperf/config": "~3.0.0",
+		"hyperf/engine": "~3.0.0",
+        "hyperf/guzzle": "~3.0.0",
+        "hyperf/logger": "~3.0.0",
+        "hyperf/utils": "^3.0.0"
+	},
+	"extra": {
+		"hyperf": {
+		  "config": "\\World\\HyperfElasticsearch\\ConfigProvider"
+		}
+	}
+}
