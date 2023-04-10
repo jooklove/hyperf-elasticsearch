@@ -11,7 +11,6 @@ declare(strict_types=1);
  */
 namespace World\HyperfElasticsearch;
 
-use App\Elasticsearch\ElasticsearchCoroutineHandler;
 use Elastic\Elasticsearch\ClientBuilder;
 use Hyperf\Logger\LoggerFactory;
 use Hyperf\Utils\Coroutine;
