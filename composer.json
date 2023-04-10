@@ -15,6 +15,11 @@
         }
     ],
     "minimum-stability": "beta",
+    "homepage": "https://github.com/jooklove/hyperf-elasticsearch.git",
+    "keywords": [
+      "hyperf",
+      "elasticsearch"
+    ],
     "require": {
 		"php": ">=8.0",
 		"ext-swoole": ">=4.5",
